@@ -11,15 +11,6 @@ window.onload = function loadSettings(){
 
 }
 
-function update() {
-    window.addEventListener("resize", function(){
-        var a = allslides[0].clientWidth - slides.clientWidth;
-        return a;
-
-      })
-}
-
-console.log(update())
 
 
  function update() {
@@ -35,7 +26,7 @@ console.log(update())
 
 }
 
-ancho(); 
+update(); 
 
 tabs.addEventListener("click", function(e){
     if(e.target.classList.contains("menu-tab") && !e.target.classList.contains("active")) {
