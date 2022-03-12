@@ -1,0 +1,291 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #141E27;
+    padding: 1rem .2rem;
+    color: bisque;
+    font-size: 1.2rem;
+    padding-bottom: 0;
+}
+
+.header-up{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin: .6rem;
+}
+
+.header-low{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    overflow: hidden;
+}
+
+.menu-tab{
+    font-size: .9rem;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    border: none;
+    background-color: transparent;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 0 .2rem;
+    transition: color .3s ease;
+    display: inline-block;
+    transition: all 50ms ease-in-out;
+    color: white;
+    padding: 0 1rem;
+    padding-bottom: .9rem;
+}
+
+.menu-tab.active{
+    border-bottom: 2px solid wheat;
+}
+
+.container{
+    background-color: #eaeaeb;
+    padding: .5rem .2rem;
+}
+
+
+.menu-list-pizza .type {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.menu-list-pizza .type .list-tab {
+    position: relative;
+    width: 50%;
+    font-size: 1.2rem;
+    font-family: inherit;
+    text-transform: capitalize;
+    border: none;
+    background-color: transparent;
+    font-weight: 300;
+    cursor: pointer;
+    transition: color .3s ease;
+    display: inline-block;
+    padding: .3rem;
+    background-color: #2ecc71;
+ border: none;
+ border-bottom: 5px solid #27ae60;
+ text-shadow: 0px -2px #27ae60;
+ -webkit-transition: all 0.1s;
+ transition: all 0.1s;
+ margin: .2rem;
+ margin-bottom: .4rem;
+}
+
+.menu-list-pizza .type .list-tab.active{
+    -webkit-transform: translate(0px,5px);
+ -ms-transform: translate(0px,5px);
+ transform: translate(0px,5px);
+ border-bottom: 1px solid white;
+ background-color: white;
+}
+
+.menu-list-pizza .price{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    margin: .8rem 0;
+    background-color: white;
+    padding-right: .3rem;
+}
+
+.name-food {
+    padding-left: .3rem;
+}
+
+.text-title{
+    font-size: .7rem;
+}
+
+.text-title h3{
+    font-size: .9rem;
+    text-align: center;
+}
+
+.menu-list-pizza .price .size{
+    display: inline-flex;
+    flex-direction: row;
+}
+
+.menu-list-pizza .price .size .sizePrice{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0 .2rem;
+}
+
+.menu-list-pizza .price .size .sizePrice:last-child(3){
+    margin-right: 0;
+}
+
+.menu-type-content{
+    display: none;
+    animation: fadeOut .9s ease-in-out ;
+}
+
+.menu-type-content.active {
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn .9s ease-in-out ;
+}
+
+.food-item{
+    width: 100%;
+    margin-bottom: .5rem;
+    background-color: white;
+    padding: 0 .3rem;
+    border-radius: .4rem;
+    padding-top: .8rem;
+}
+
+.food-item .food-img{
+    float: left;
+    width: 2.6rem;
+    margin-right: .2rem;
+}
+
+
+
+.food-item .food-content .title{
+    display: flex;
+    justify-content: space-between;
+}
+
+.food-item .food-content .title h4{
+    font-size: .8rem;
+}
+
+.food-item .food-img img{
+    border-radius: .4rem;
+    margin-right: .2rem;
+    width: 100%;
+}
+
+.value{
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    width: 176px;
+
+}
+
+.value .sizePrice{
+    font-size: .7rem;
+}
+
+.description{
+    font-size: .7rem;
+    font-weight: 300;
+    text-align: justify;
+    margin-left: 3rem;
+}
+
+
+.lightbox{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: rgb(0, 0, 0, .5);
+    top: 0;
+    left: 0;
+    justify-content: center;
+    align-items: center;
+    transform: translate(100%);
+    z-index: 999999;
+    transition: transform .2s ease-in-out;
+}
+
+.lightbox-container{
+    width: 15rem;
+}
+
+.agregar-imagen{
+    object-fit: cover;
+    width: 100%;
+    transform: scale(0);
+    transition: transform .3s .2s;
+    margin: auto;
+}
+
+.show{
+    transform: translate(0);
+}
+
+.showImage{
+    transform: scale(1);
+}
+
+
+
+.swiper {
+
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+    z-index: 1;
+  }
+
+
+.swiper-wrapper{
+    transform: translateX(0);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    transition: all 500ms ease;
+    box-sizing: content-box;
+
+}
+
+.swiper-slide{
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition-property: transform;
+}
+
+
+
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+
+    
+
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut{
+    0%{
+        opacity: 1;
+        
+    }
+
+    100%{
+        opacity: 0;
+    }
+
+}
